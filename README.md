@@ -1,42 +1,71 @@
-# MRI Brain Tumor Analysis
+# U-Net Brain Tumor Image Segmentation
 
-This repository contains a Jupyter Notebook implementation of an MRI Brain Tumor analysis model. The model is designed to classify brain MRI scans into tumor or non-tumor categories, leveraging advanced deep learning techniques to achieve high accuracy.
+This repository contains code for **brain tumor image segmentation** using the U-Net architecture, implemented in Python and Jupyter Notebook. The project aims to accurately segment brain tumors from MRI images.
 
-## Dataset 
+## Table of Contents
+- [Overview](#overview)
+- [Requirements](#requirements)
+- [Training](#training)
+- [Evaluation](#evaluation)
+- [Results](#results)
+- [Usage](#usage)
+- [License](#license)
 
-https://www.kaggle.com/datasets/navoneel/brain-mri-images-for-brain-tumor-detection
+## Overview
+This project uses the U-Net deep learning architecture to segment brain tumors from MRI scans. The U-Net model is well-suited for biomedical image segmentation due to its fully convolutional nature and symmetric encoder-decoder structure.
 
-## Project Overview
-
-Detecting brain tumors early is crucial for effective treatment. This project uses MRI scans to automatically identify the presence of brain tumors, providing a tool for quick and reliable diagnosis.
-
-### Key Features:
-- **Image Preprocessing**: MRI images are preprocessed and resized to 224x224 pixels for uniform input into the model.
-- **Deep Learning Architecture**: The model is built using a convolutional neural network (CNN) with PyTorch to extract features from MRI scans.
-- **Training on GPU**: The project utilizes a Kaggle P100 GPU to process the input images efficiently.
-- **Epochs**: The model is trained over 15 epochs, processing approximately 2.6 lakh input images and 1.3 lakh output images.
-- **Data Augmentation**: Data augmentation techniques are used to prevent overfitting and improve the model's robustness.
-  
-## File Structure
-- `"brain-tumor-detection.ipynb"`: The main Jupyter Notebook that contains the code for preprocessing, training, and evaluating the model.
-  
-## Dependencies
-
-To run this project, you'll need the following libraries:
-
-- PyTorch
-- Torchvision
+## Requirements
+To run this code, you need the following libraries and tools installed:
+- Python 3.x
+- TensorFlow
+- Keras
 - NumPy
 - Matplotlib
-- Scikit-learn
-- OpenCV (for image processing)
-  
-You can install these dependencies using the following command:
+- OpenCV
+- scikit-learn
+- Jupyter Notebook (if running interactively)
+
+You can install all the necessary dependencies with:
 
 ```bash
-pip install torch torchvision numpy matplotlib scikit-learn opencv-python
+pip install -r requirements.txt
 ```
 
+## Clone the repository:
+```bash
+git clone https://github.com/your-username/U-Net-brain-tumor-segmentation.git
+```
+## Navigate to the directory:
+```bash
+cd U-Net-brain-tumor-segmentation
+
+```
+
+```bash
+jupyter notebook U-NET-brain-tumor-image-segmentation.ipynb
+
+```
+## Training
+The model can be trained using the provided notebook. The U-Net architecture is already set up to begin training with MRI images and their corresponding tumor masks.
+
+Open the Jupyter notebook.
+Load the dataset.
+Run the cells to preprocess, train the model, and evaluate performance.
+## Evaluation
+After training, the model can be evaluated using the Dice coefficient and Intersection over Union (IoU) metrics. Visualizations of predicted masks against ground truth are also provided.
+
 ## Results
-The model demonstrates promising results, achieving high accuracy in detecting tumors from MRI scans. Detailed results, including loss and accuracy curves, are included in the notebook.
+The model's performance can be visually assessed by comparing the predicted segmentation masks with the actual tumor boundaries from the dataset.
+
+## Example visualizations:
+
+Input Image	Ground Truth	Predicted Mask
+## Usage
+To use the trained model for segmenting new MRI images, you can modify the notebook's inference section. Upload your MRI scans, and the model will predict and output the segmentation masks.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+
+
 
