@@ -2,6 +2,10 @@
 
 This repository contains a Jupyter Notebook implementation of an MRI Brain Tumor analysis model. The model is designed to classify brain MRI scans into tumor or non-tumor categories, leveraging advanced deep learning techniques to achieve high accuracy.
 
+## Dataset 
+
+https://www.kaggle.com/datasets/navoneel/brain-mri-images-for-brain-tumor-detection
+
 ## Project Overview
 
 Detecting brain tumors early is crucial for effective treatment. This project uses MRI scans to automatically identify the presence of brain tumors, providing a tool for quick and reliable diagnosis.
